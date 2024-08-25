@@ -16,7 +16,7 @@ public class RecipeMapper {
         return new Recipe(
                 recipeDto.getName(),
                 recipeDto.getIngredients(),
-                recipeDto.getIngredients()
+                recipeDto.getDirections()
         );
     }
 }

@@ -20,6 +20,9 @@ public class RecipeImpl implements RecipeService {
     @Override
     public RecipeDto createRecipe(RecipeDto recipeDto) {
         Recipe recipe = RecipeMapper.maptToRecipe(recipeDto);
+        if (recipe.getDirections() == null || recipe.getDirections().isEmpty()) {
+            throw new IllegalArgumentException("Directions cannot be null or empty");
+        }
         Recipe savedRecipe = recipeRepo.save(recipe);
         return RecipeMapper.maptToRecipeDto(savedRecipe);
     }
