@@ -63,10 +63,24 @@ public class RecipeController {
         List<RecipeDto> recipeDtos = recipeService.getAllRecipes();
         return ResponseEntity.ok(recipeDtos);
     }
+
     @PutMapping("{name}")
-    public ResponseEntity<RecipeDto> updateRecipe(@PathVariable("name") String name, @RequestBody RecipeDto recipeDto) {
-        RecipeDto updatedRecipe = recipeService.updateRecipe(name, recipeDto);
-        return ResponseEntity.ok(updatedRecipe);
+    public ResponseEntity<RecipeDto> updateRecipe(@PathVariable("name") String name, @RequestBody String payload) {
+        try {
+            // Parse the JSON payload
+            JsonNode rootNode = objectMapper.readTree(payload);
+            JsonNode dataNode = rootNode.get("data");
+
+            // Convert the 'data' node to RecipeDto
+            RecipeDto recipeDto = objectMapper.treeToValue(dataNode, RecipeDto.class);
+
+            RecipeDto updatedRecipe = recipeService.updateRecipe(name, recipeDto);
+            return ResponseEntity.ok(updatedRecipe);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
     }
     @DeleteMapping("{name}")
     public ResponseEntity<String> deleteRecipe(@PathVariable("name") String name) {
