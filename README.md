@@ -1,6 +1,6 @@
 # MacNCheese-REST
 
-**MacNCheese-REST** is a comprehensive RESTful web service that serves as a mac and cheese wiki, enabling full CRUD (Create, Read, Update, Delete) operations on mac and cheese recipes. This application is built using Spring Boot MVC as the backend framework, with PostgreSQL as the database and Hibernate as the ORM.
+**MacNCheese-REST** is a comprehensive RESTful web service that serves as a mac and cheese wiki, enabling full CRUD (Create, Read, Update, Delete) operations on mac and cheese recipes. This application is built using Spring Boot as the backend framework, with PostgreSQL as the database, Hibernate as the ORM and MVC as the software architecture.
 
 ## Features
 
