@@ -4,10 +4,15 @@
 
 ## Features
 
-- **Create** new mac and cheese recipes.
 - **Read** detailed information about existing recipes.
+<img width="1004" alt="Screenshot 2024-08-31 at 10 39 51 AM" src="https://github.com/user-attachments/assets/436e482e-fcff-4e7a-b6ae-f32a2016399c">
+- **Create** new mac and cheese recipes.
+<img width="1004" alt="Screenshot 2024-08-31 at 10 42 37 AM" src="https://github.com/user-attachments/assets/53616648-6a2e-4833-819d-cfe9f75d6eb8">
 - **Update** recipe details.
+<img width="1004" alt="Screenshot 2024-08-31 at 10 47 04 AM" src="https://github.com/user-attachments/assets/4befeaf9-e513-4c35-a937-c1f768c4081a">
 - **Delete** recipes from the wiki.
+<img width="1004" alt="Screenshot 2024-08-31 at 10 47 32 AM" src="https://github.com/user-attachments/assets/06f654c9-ce43-4b5c-94cd-90550b9e00d5">
+
 - Fully RESTful API with support for JSON and XML responses.
 
 ## Technology Stack
